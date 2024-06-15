@@ -1,0 +1,65 @@
+<!-- newtab.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space View</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0px;
+      left: 0px;
+      object-fit: cover;
+      margin: 0;
+      overflow: hidden;
+      opacity: 1;
+      background-color: black;
+      z-index: -1;
+    }
+    
+    #imageContainer {
+        display: flex;
+        flex-direction: row;
+
+        gap: 4px;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        object-fit: cover;
+        overflow: hidden;
+        opacity: 1;
+        z-index: 1;
+    }
+    #creditContainer {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      z-index: 3;
+      color: white;
+      font-size: 14px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px;
+      border-radius: 3px;
+    }
+    .fade-in-image { animation: fadeIn 1s; }
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="fade-in-image" id="imageContainer"></div>
+  <div id="creditContainer"></div>
+  <script src="newtab.js"></script>
+</body>
+</html>
